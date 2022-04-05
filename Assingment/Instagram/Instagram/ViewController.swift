@@ -8,12 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.configureView()
     }
 
+    func configureView(){
+        loginButton.isUserInteractionEnabled = false
+        loginButton.alpha = 0.5
+    }
 
 }
 
