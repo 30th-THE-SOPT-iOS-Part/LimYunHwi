@@ -11,10 +11,16 @@ class RegisterUserNameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         self.configureView()
     }
 
     func configureView(){
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
         nextButton.isUserInteractionEnabled = false
         nextButton.alpha = 0.5
     }

@@ -17,6 +17,10 @@ class RegisterPasswordViewController: UIViewController {
     }
     
     func configureView(){
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
         nextButton.isUserInteractionEnabled = false
         nextButton.alpha = 0.5
     }
