@@ -112,8 +112,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-zR-Jgx">
-                                <rect key="frame" x="24" y="74" width="366" height="201.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-zR-Jgx">
+                                <rect key="frame" x="24" y="74" width="366" height="207"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 이름 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6q-dE-ott">
                                         <rect key="frame" x="80" y="0.0" width="206" height="33.5"/>
@@ -121,18 +121,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="새 계정에서 사용할 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sld-s0-1PR">
-                                        <rect key="frame" x="30" y="43.5" width="306" height="58"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="Ke7-YM-ins"/>
-                                        </constraints>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 계정에서 사용할 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrA-V6-ohA">
+                                        <rect key="frame" x="30" y="53.5" width="306" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JV-f3-nmB">
-                                        <rect key="frame" x="0.0" y="111.5" width="366" height="40"/>
+                                        <rect key="frame" x="0.0" y="107" width="366" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="qOK-Q7-5ND"/>
@@ -141,7 +137,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoS-9g-VmM">
-                                        <rect key="frame" x="0.0" y="161.5" width="366" height="40"/>
+                                        <rect key="frame" x="0.0" y="167" width="366" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="vMN-Ug-ta5"/>
                                         </constraints>
@@ -153,12 +149,12 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="DrA-V6-ohA" firstAttribute="leading" secondItem="V6W-zR-Jgx" secondAttribute="leading" constant="30" id="0z1-9y-Zhw"/>
+                                    <constraint firstAttribute="trailing" secondItem="DrA-V6-ohA" secondAttribute="trailing" constant="30" id="2Mg-5R-P2m"/>
                                     <constraint firstAttribute="trailing" secondItem="qoS-9g-VmM" secondAttribute="trailing" id="FC7-UP-pQp"/>
                                     <constraint firstItem="qoS-9g-VmM" firstAttribute="leading" secondItem="V6W-zR-Jgx" secondAttribute="leading" id="FME-0a-R8p"/>
                                     <constraint firstAttribute="trailing" secondItem="7JV-f3-nmB" secondAttribute="trailing" id="Fc0-yq-z3p"/>
                                     <constraint firstItem="7JV-f3-nmB" firstAttribute="leading" secondItem="V6W-zR-Jgx" secondAttribute="leading" id="jLY-0i-CSa"/>
-                                    <constraint firstAttribute="trailing" secondItem="sld-s0-1PR" secondAttribute="trailing" constant="30" id="oJr-9R-vIt"/>
-                                    <constraint firstItem="sld-s0-1PR" firstAttribute="leading" secondItem="V6W-zR-Jgx" secondAttribute="leading" constant="30" id="xIe-Rg-RIR"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -186,8 +182,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-E4-1hi">
-                                <rect key="frame" x="24" y="74" width="366" height="201.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gt2-E4-1hi">
+                                <rect key="frame" x="24" y="74" width="366" height="207"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-32-wAc">
                                         <rect key="frame" x="95" y="0.0" width="176" height="33.5"/>
@@ -195,18 +191,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="비밀번호를 저장할 수 있으므로 iCloud 기기에서 로그인 정보를 입력하지 않아도 됩니다." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x9G-pI-N2i">
-                                        <rect key="frame" x="30" y="43.5" width="306" height="58"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="zU0-5M-kv1"/>
-                                        </constraints>
-                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 저장할 수 있으므로 iCloud 기기에서 로그인 정보를 입력하지 않아도 됩니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd2-9Q-aIO">
+                                        <rect key="frame" x="30" y="53.5" width="306" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlU-9b-5jJ">
-                                        <rect key="frame" x="0.0" y="111.5" width="366" height="40"/>
+                                        <rect key="frame" x="0.0" y="107" width="366" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="pIR-F4-0Mg"/>
@@ -215,7 +207,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S24-lG-saq">
-                                        <rect key="frame" x="0.0" y="161.5" width="366" height="40"/>
+                                        <rect key="frame" x="0.0" y="167" width="366" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="OSV-Pc-Bqm"/>
                                         </constraints>
@@ -227,9 +219,9 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="x9G-pI-N2i" firstAttribute="leading" secondItem="Gt2-E4-1hi" secondAttribute="leading" constant="30" id="E2h-DS-Rta"/>
                                     <constraint firstAttribute="trailing" secondItem="S24-lG-saq" secondAttribute="trailing" id="bus-Jn-3Xf"/>
-                                    <constraint firstAttribute="trailing" secondItem="x9G-pI-N2i" secondAttribute="trailing" constant="30" id="cWm-vL-B2m"/>
+                                    <constraint firstAttribute="trailing" secondItem="dd2-9Q-aIO" secondAttribute="trailing" constant="30" id="byI-LL-iDh"/>
+                                    <constraint firstItem="dd2-9Q-aIO" firstAttribute="leading" secondItem="Gt2-E4-1hi" secondAttribute="leading" constant="30" id="cWP-gh-tpl"/>
                                     <constraint firstItem="S24-lG-saq" firstAttribute="leading" secondItem="Gt2-E4-1hi" secondAttribute="leading" id="lq5-AV-31w"/>
                                     <constraint firstAttribute="trailing" secondItem="nlU-9b-5jJ" secondAttribute="trailing" id="orB-KU-xbS"/>
                                     <constraint firstItem="nlU-9b-5jJ" firstAttribute="leading" secondItem="Gt2-E4-1hi" secondAttribute="leading" id="t29-zX-3Ya"/>
