@@ -13,11 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     var user: User?
+    var passwordShownButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.configureInputField()
+        self.configurePasswordShownButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +45,24 @@ class ViewController: UIViewController {
         self.loginButton.alpha = self.loginButton.isUserInteractionEnabled ? 1 : 0.5
     }
     
+    private func configurePasswordShownButton() {
+        self.passwordShownButton = UIButton.init(primaryAction: UIAction(handler: {_ in
+            self.passwordTextField.isSecureTextEntry.toggle()
+            self.passwordShownButton.isSelected.toggle()
+        }))
+        
+        var buttonConfiguration = UIButton.Configuration.plain()
+        buttonConfiguration.imagePadding = 10
+        buttonConfiguration.baseBackgroundColor = .clear
+        
+        self.passwordShownButton.setImage(UIImage(named: "PasswordHiddenIcon"), for: .normal)
+        self.passwordShownButton.setImage(UIImage(named: "PasswordShownIcon"), for: .selected)
+        self.passwordShownButton.configuration = buttonConfiguration
+        
+        self.passwordTextField.rightView = passwordShownButton
+        self.passwordTextField.rightViewMode = .always
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CompleteSignUpViewController" {
             guard let completeSignUpVC = segue.destination as? CompleteSignUpViewController else {return}
@@ -54,4 +74,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
