@@ -17,17 +17,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.configureInputField()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.configureView()
     }
-
-    func configureView(){
+    
+    private func configureView(){
+        self.userIdTextField.text = ""
+        self.passwordTextField.text = ""
+        
         self.loginButton.isUserInteractionEnabled = false
         self.loginButton.alpha = 0.5
     }
     
-    @IBAction func editTextField(_ sender: UITextField) {
-        self.loginButton.isUserInteractionEnabled = true
-        self.loginButton.alpha = 1
+    private func configureInputField() {
+        self.userIdTextField.addTarget(self, action: #selector(vaildLoginButton), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(vaildLoginButton), for: .editingChanged)
+    }
+    
+    @objc private func vaildLoginButton() {
+        self.loginButton.isUserInteractionEnabled = !(self.userIdTextField.text?.isEmpty ?? true) && !(self.passwordTextField.text?.isEmpty ?? true)
+        
+        self.loginButton.alpha = self.loginButton.isUserInteractionEnabled ? 1 : 0.5
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

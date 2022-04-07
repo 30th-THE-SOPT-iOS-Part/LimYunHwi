@@ -17,9 +17,10 @@ class RegisterPasswordViewController: UIViewController {
         super.viewDidLoad()
 
         self.configureView()
+        self.configureInputField()
     }
     
-    func configureView(){
+    private func configureView(){
         let backButton = UIBarButtonItem()
         backButton.title = ""
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
@@ -28,9 +29,13 @@ class RegisterPasswordViewController: UIViewController {
         self.nextButton.alpha = 0.5
     }
     
-    @IBAction func EditPassword(_ sender: UITextField) {
-        self.nextButton.isUserInteractionEnabled = true
-        self.nextButton.alpha = 1
+    private func configureInputField(){
+        self.passwordTextField.addTarget(self, action: #selector(vaildInputField), for: .editingChanged)
+    }
+    
+    @objc private func vaildInputField(){
+        self.nextButton.isUserInteractionEnabled = !(self.passwordTextField.text?.isEmpty ?? true)
+        self.nextButton.alpha = self.nextButton.isUserInteractionEnabled ? 1 : 0.5
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

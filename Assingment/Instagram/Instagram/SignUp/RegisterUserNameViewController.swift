@@ -17,9 +17,10 @@ class RegisterUserNameViewController: UIViewController {
         super.viewDidLoad()
         
         self.configureView()
+        self.configureInputField()
     }
 
-    func configureView(){
+    private func configureView(){
         let backButton = UIBarButtonItem()
         backButton.title = ""
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
@@ -28,9 +29,13 @@ class RegisterUserNameViewController: UIViewController {
         self.nextButton.alpha = 0.5
     }
     
-    @IBAction func EditUserName(_ sender: UITextField) {
-        self.nextButton.isUserInteractionEnabled = true
-        self.nextButton.alpha = 1
+    private func configureInputField(){
+        self.userNameTextField.addTarget(self, action: #selector(vaildNextButton), for: .editingChanged)
+    }
+    
+    @objc private func vaildNextButton(){
+        self.nextButton.isUserInteractionEnabled = !(self.userNameTextField.text?.isEmpty ?? true)
+        self.nextButton.alpha = self.nextButton.isUserInteractionEnabled ? 1 : 0.5
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

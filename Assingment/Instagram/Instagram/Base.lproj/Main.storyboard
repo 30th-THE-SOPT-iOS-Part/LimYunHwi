@@ -44,9 +44,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="editTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Cqq-zH-kTI"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBd-Ap-8jf">
                                         <rect key="frame" x="0.0" y="59" width="366" height="40"/>
@@ -56,9 +53,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                        <connections>
-                                            <action selector="editTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mlG-BZ-mjK"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -150,9 +144,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="EditUserName:" destination="uY8-Zh-1Do" eventType="editingChanged" id="HdI-Yj-d9X"/>
-                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoS-9g-VmM">
                                         <rect key="frame" x="0.0" y="167" width="366" height="40"/>
@@ -228,9 +219,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                        <connections>
-                                            <action selector="EditPassword:" destination="0J8-db-lyZ" eventType="editingChanged" id="Mpb-L4-HE8"/>
-                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S24-lG-saq">
                                         <rect key="frame" x="0.0" y="167" width="366" height="40"/>
@@ -358,7 +346,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zCb-cN-LW7"/>
+        <segue reference="uwk-Lw-Glr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="InstagramLogo" width="175" height="50"/>
