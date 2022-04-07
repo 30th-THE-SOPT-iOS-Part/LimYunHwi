@@ -30,7 +30,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="SAH-tc-K9C" kind="presentation" modalPresentationStyle="fullScreen" id="zCb-cN-LW7"/>
+                                    <segue destination="SAH-tc-K9C" kind="presentation" identifier="CompleteSignUpViewController" modalPresentationStyle="fullScreen" id="zCb-cN-LW7"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="2fB-KY-tSl">
@@ -44,6 +44,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Cqq-zH-kTI"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBd-Ap-8jf">
                                         <rect key="frame" x="0.0" y="59" width="366" height="40"/>
@@ -53,6 +56,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <action selector="editTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mlG-BZ-mjK"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -105,6 +111,8 @@
                     <navigationItem key="navigationItem" id="cAv-R0-omf"/>
                     <connections>
                         <outlet property="loginButton" destination="9uH-1H-MOF" id="MgI-30-Ibx"/>
+                        <outlet property="passwordTextField" destination="QBd-Ap-8jf" id="rBk-r4-Aq6"/>
+                        <outlet property="userIdTextField" destination="FtC-CZ-ftb" id="0VX-BS-19v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -350,7 +358,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uwk-Lw-Glr"/>
+        <segue reference="zCb-cN-LW7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="InstagramLogo" width="175" height="50"/>
