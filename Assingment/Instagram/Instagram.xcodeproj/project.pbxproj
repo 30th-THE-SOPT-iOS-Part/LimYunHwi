@@ -16,6 +16,7 @@
 		9A84A12927FC2C7100BA3C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A84A12727FC2C7100BA3C74 /* LaunchScreen.storyboard */; };
 		9A84A13227FC886E00BA3C74 /* RegisterUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84A13127FC886E00BA3C74 /* RegisterUserNameViewController.swift */; };
 		9A84A13427FC88E900BA3C74 /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84A13327FC88E900BA3C74 /* RegisterPasswordViewController.swift */; };
+		9AE50BF627FE8DD20086E9AE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE50BF527FE8DD20086E9AE /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9A84A12A27FC2C7100BA3C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A84A13127FC886E00BA3C74 /* RegisterUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameViewController.swift; sourceTree = "<group>"; };
 		9A84A13327FC88E900BA3C74 /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
+		9AE50BF527FE8DD20086E9AE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				9A84A12527FC2C7100BA3C74 /* Assets.xcassets */,
 				9A84A12727FC2C7100BA3C74 /* LaunchScreen.storyboard */,
 				9A84A12A27FC2C7100BA3C74 /* Info.plist */,
+				9AE50BF527FE8DD20086E9AE /* User.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				9A84A11D27FC2C7000BA3C74 /* AppDelegate.swift in Sources */,
 				9A84A11F27FC2C7000BA3C74 /* SceneDelegate.swift in Sources */,
 				9A84A13227FC886E00BA3C74 /* RegisterUserNameViewController.swift in Sources */,
+				9AE50BF627FE8DD20086E9AE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

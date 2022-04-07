@@ -142,6 +142,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="EditUserName:" destination="uY8-Zh-1Do" eventType="editingChanged" id="HdI-Yj-d9X"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoS-9g-VmM">
                                         <rect key="frame" x="0.0" y="167" width="366" height="40"/>
@@ -154,7 +157,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="0J8-db-lyZ" kind="show" id="hcS-rU-CF4"/>
+                                            <segue destination="0J8-db-lyZ" kind="show" identifier="RegisterPasswordViewController" id="hcS-rU-CF4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -179,6 +182,7 @@
                     <navigationItem key="navigationItem" id="blg-e1-Xj1"/>
                     <connections>
                         <outlet property="nextButton" destination="qoS-9g-VmM" id="MR7-fD-qk9"/>
+                        <outlet property="userNameTextField" destination="7JV-f3-nmB" id="rQ1-Qq-2oJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1e9-lH-MZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -216,6 +220,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <action selector="EditPassword:" destination="0J8-db-lyZ" eventType="editingChanged" id="Mpb-L4-HE8"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S24-lG-saq">
                                         <rect key="frame" x="0.0" y="167" width="366" height="40"/>
@@ -228,7 +235,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="SAH-tc-K9C" kind="presentation" modalPresentationStyle="fullScreen" id="uwk-Lw-Glr"/>
+                                            <segue destination="SAH-tc-K9C" kind="presentation" identifier="CompleteSignUpViewController" modalPresentationStyle="fullScreen" id="uwk-Lw-Glr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -253,6 +260,7 @@
                     <navigationItem key="navigationItem" id="VCa-E8-Wfe"/>
                     <connections>
                         <outlet property="nextButton" destination="S24-lG-saq" id="6HM-OL-SNN"/>
+                        <outlet property="passwordTextField" destination="nlU-9b-5jJ" id="sgL-na-ytY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a56-kK-Yke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -313,6 +321,9 @@
                             <constraint firstItem="A0i-aG-B74" firstAttribute="leading" secondItem="Ga0-48-SjY" secondAttribute="leading" constant="24" id="h8N-K6-QE9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="lkZ-Cn-pul" id="g4M-gr-JbM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCP-HR-jee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
