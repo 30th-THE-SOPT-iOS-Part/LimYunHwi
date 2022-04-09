@@ -16,8 +16,8 @@ class RegisterPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.configureView()
-        self.configureInputField()
+        configureView()
+        configureInputField()
     }
     
     private func configureView(){

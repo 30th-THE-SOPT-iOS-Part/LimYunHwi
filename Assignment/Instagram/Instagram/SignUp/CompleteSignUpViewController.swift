@@ -25,11 +25,8 @@ class CompleteSignUpViewController: UIViewController {
     }
     
     @IBAction func tapDoneButton(_ sender: UIButton) {
-        let presentingVC = self.presentingViewController!
-        if presentingVC is UINavigationController {
-            let navigationController = presentingVC as? UINavigationController
-            navigationController?.popToRootViewController(animated: false)
-        }
+        guard let presentingViewController = self.presentingViewController as? UINavigationController else {return}
+        presentingViewController.popToRootViewController(animated: false)
         
         self.dismiss(animated: true, completion: nil)
     }
