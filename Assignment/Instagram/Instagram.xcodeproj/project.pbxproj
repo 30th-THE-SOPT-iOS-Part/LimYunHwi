@@ -17,6 +17,17 @@
 		9A84A13227FC886E00BA3C74 /* RegisterUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84A13127FC886E00BA3C74 /* RegisterUserNameViewController.swift */; };
 		9A84A13427FC88E900BA3C74 /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84A13327FC88E900BA3C74 /* RegisterPasswordViewController.swift */; };
 		9AE50BF627FE8DD20086E9AE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE50BF527FE8DD20086E9AE /* User.swift */; };
+		9AEAC50F280C291900A187C0 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC50E280C291900A187C0 /* TabBarController.storyboard */; };
+		9AEAC511280C2A4900A187C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAC510280C2A4900A187C0 /* HomeViewController.swift */; };
+		9AEAC513280C2A6000A187C0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAC512280C2A6000A187C0 /* SearchViewController.swift */; };
+		9AEAC515280C2AE400A187C0 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAC514280C2AE400A187C0 /* ReelsViewController.swift */; };
+		9AEAC517280C2B2200A187C0 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAC516280C2B2200A187C0 /* ShopViewController.swift */; };
+		9AEAC519280C2C2C00A187C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEAC518280C2C2C00A187C0 /* ProfileViewController.swift */; };
+		9AEAC51B280C2CB500A187C0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC51A280C2CB500A187C0 /* Home.storyboard */; };
+		9AEAC51D280C2D0500A187C0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC51C280C2D0500A187C0 /* Search.storyboard */; };
+		9AEAC51F280C2D1300A187C0 /* Reels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC51E280C2D1300A187C0 /* Reels.storyboard */; };
+		9AEAC521280C2D1C00A187C0 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC520280C2D1C00A187C0 /* Shop.storyboard */; };
+		9AEAC523280C2D2C00A187C0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC522280C2D2C00A187C0 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +43,17 @@
 		9A84A13127FC886E00BA3C74 /* RegisterUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserNameViewController.swift; sourceTree = "<group>"; };
 		9A84A13327FC88E900BA3C74 /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
 		9AE50BF527FE8DD20086E9AE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9AEAC50E280C291900A187C0 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		9AEAC510280C2A4900A187C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9AEAC512280C2A6000A187C0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9AEAC514280C2AE400A187C0 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		9AEAC516280C2B2200A187C0 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		9AEAC518280C2C2C00A187C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9AEAC51A280C2CB500A187C0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		9AEAC51C280C2D0500A187C0 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		9AEAC51E280C2D1300A187C0 /* Reels.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reels.storyboard; sourceTree = "<group>"; };
+		9AEAC520280C2D1C00A187C0 /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
+		9AEAC522280C2D2C00A187C0 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +86,7 @@
 		9A84A11B27FC2C7000BA3C74 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				9AEAC50D280C28D300A187C0 /* TabBarController */,
 				9A84A13027FC872600BA3C74 /* SignUp */,
 				9A84A11C27FC2C7000BA3C74 /* AppDelegate.swift */,
 				9A84A11E27FC2C7000BA3C74 /* SceneDelegate.swift */,
@@ -85,6 +108,24 @@
 				9A4A105D27FD93BD008D3313 /* CompleteSignUpViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		9AEAC50D280C28D300A187C0 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				9AEAC510280C2A4900A187C0 /* HomeViewController.swift */,
+				9AEAC512280C2A6000A187C0 /* SearchViewController.swift */,
+				9AEAC514280C2AE400A187C0 /* ReelsViewController.swift */,
+				9AEAC516280C2B2200A187C0 /* ShopViewController.swift */,
+				9AEAC518280C2C2C00A187C0 /* ProfileViewController.swift */,
+				9AEAC50E280C291900A187C0 /* TabBarController.storyboard */,
+				9AEAC51A280C2CB500A187C0 /* Home.storyboard */,
+				9AEAC51C280C2D0500A187C0 /* Search.storyboard */,
+				9AEAC51E280C2D1300A187C0 /* Reels.storyboard */,
+				9AEAC520280C2D1C00A187C0 /* Shop.storyboard */,
+				9AEAC522280C2D2C00A187C0 /* Profile.storyboard */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +186,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AEAC521280C2D1C00A187C0 /* Shop.storyboard in Resources */,
 				9A84A12927FC2C7100BA3C74 /* LaunchScreen.storyboard in Resources */,
+				9AEAC51F280C2D1300A187C0 /* Reels.storyboard in Resources */,
+				9AEAC51B280C2CB500A187C0 /* Home.storyboard in Resources */,
 				9A84A12627FC2C7100BA3C74 /* Assets.xcassets in Resources */,
+				9AEAC50F280C291900A187C0 /* TabBarController.storyboard in Resources */,
+				9AEAC523280C2D2C00A187C0 /* Profile.storyboard in Resources */,
+				9AEAC51D280C2D0500A187C0 /* Search.storyboard in Resources */,
 				9A84A12427FC2C7000BA3C74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,8 +207,13 @@
 			files = (
 				9A84A12127FC2C7000BA3C74 /* ViewController.swift in Sources */,
 				9A4A105E27FD93BD008D3313 /* CompleteSignUpViewController.swift in Sources */,
+				9AEAC517280C2B2200A187C0 /* ShopViewController.swift in Sources */,
 				9A84A13427FC88E900BA3C74 /* RegisterPasswordViewController.swift in Sources */,
+				9AEAC513280C2A6000A187C0 /* SearchViewController.swift in Sources */,
+				9AEAC511280C2A4900A187C0 /* HomeViewController.swift in Sources */,
+				9AEAC519280C2C2C00A187C0 /* ProfileViewController.swift in Sources */,
 				9A84A11D27FC2C7000BA3C74 /* AppDelegate.swift in Sources */,
+				9AEAC515280C2AE400A187C0 /* ReelsViewController.swift in Sources */,
 				9A84A11F27FC2C7000BA3C74 /* SceneDelegate.swift in Sources */,
 				9A84A13227FC886E00BA3C74 /* RegisterUserNameViewController.swift in Sources */,
 				9AE50BF627FE8DD20086E9AE /* User.swift in Sources */,
