@@ -67,6 +67,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A3B7D12280D1C2B00F6728E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9A84A11027FC2C7000BA3C74 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +93,7 @@
 		9A84A11B27FC2C7000BA3C74 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				9A3B7D12280D1C2B00F6728E /* Extension */,
 				9AEAC50D280C28D300A187C0 /* TabBarController */,
 				9A84A13027FC872600BA3C74 /* SignUp */,
 				9A84A11C27FC2C7000BA3C74 /* AppDelegate.swift */,

@@ -232,7 +232,7 @@
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="SAH-tc-K9C" kind="presentation" identifier="CompleteSignUpViewController" modalPresentationStyle="fullScreen" id="uwk-Lw-Glr"/>
+                                            <action selector="tapNextButton:" destination="0J8-db-lyZ" eventType="touchUpInside" id="yqU-cK-Dzf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -267,7 +267,7 @@
         <!--Complete Sign Up View Controller-->
         <scene sceneID="QaS-F2-ecX">
             <objects>
-                <viewController id="SAH-tc-K9C" customClass="CompleteSignUpViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompleteSignUpViewController" id="SAH-tc-K9C" customClass="CompleteSignUpViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w7x-4b-UiO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,6 +314,9 @@
                                 <rect key="frame" x="124.5" y="530" width="165" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기"/>
+                                <connections>
+                                    <action selector="tapSignInOtherAccountButton:" destination="SAH-tc-K9C" eventType="touchUpInside" id="GQ7-eh-IO0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ga0-48-SjY"/>
@@ -354,9 +357,6 @@
             <point key="canvasLocation" x="44.927536231884062" y="65.625"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zCb-cN-LW7"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="InstagramLogo" width="175" height="50"/>
         <systemColor name="systemBackgroundColor">
