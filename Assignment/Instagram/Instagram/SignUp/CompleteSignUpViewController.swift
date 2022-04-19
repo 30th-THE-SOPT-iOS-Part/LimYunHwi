@@ -25,11 +25,11 @@ class CompleteSignUpViewController: UIViewController {
     }
     
     @IBAction func tapDoneButton(_ sender: UIButton) {
-        //Error
-//        guard let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
-//        homeViewController.modalPresentationStyle = .fullScreen
-//
-//        self.present(homeViewController, animated: true, completion: nil)
+        let tabBarControllerStoryboard = UIStoryboard(name: "TabBarController", bundle: nil)
+        guard let tabBarController = tabBarControllerStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
+        tabBarController.modalPresentationStyle = .fullScreen
+
+        self.present(tabBarController, animated: true, completion: nil)
     }
     
     @IBAction func tapSignInOtherAccountButton(_ sender: UIButton) {

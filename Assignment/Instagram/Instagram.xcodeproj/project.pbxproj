@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A2FBCAE280EBDB900470EF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FBCAD280EBDB900470EF0 /* TabBarController.swift */; };
 		9A4A105E27FD93BD008D3313 /* CompleteSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A105D27FD93BD008D3313 /* CompleteSignUpViewController.swift */; };
 		9A84A11D27FC2C7000BA3C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84A11C27FC2C7000BA3C74 /* AppDelegate.swift */; };
 		9A84A11F27FC2C7000BA3C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84A11E27FC2C7000BA3C74 /* SceneDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A2FBCAD280EBDB900470EF0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9A4A105D27FD93BD008D3313 /* CompleteSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpViewController.swift; sourceTree = "<group>"; };
 		9A84A11927FC2C7000BA3C74 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A84A11C27FC2C7000BA3C74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9AEAC514280C2AE400A187C0 /* ReelsViewController.swift */,
 				9AEAC516280C2B2200A187C0 /* ShopViewController.swift */,
 				9AEAC518280C2C2C00A187C0 /* ProfileViewController.swift */,
+				9A2FBCAD280EBDB900470EF0 /* TabBarController.swift */,
 				9AEAC50E280C291900A187C0 /* TabBarController.storyboard */,
 				9AEAC51A280C2CB500A187C0 /* Home.storyboard */,
 				9AEAC51C280C2D0500A187C0 /* Search.storyboard */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A84A12127FC2C7000BA3C74 /* ViewController.swift in Sources */,
+				9A2FBCAE280EBDB900470EF0 /* TabBarController.swift in Sources */,
 				9A4A105E27FD93BD008D3313 /* CompleteSignUpViewController.swift in Sources */,
 				9AEAC517280C2B2200A187C0 /* ShopViewController.swift in Sources */,
 				9A84A13427FC88E900BA3C74 /* RegisterPasswordViewController.swift in Sources */,
