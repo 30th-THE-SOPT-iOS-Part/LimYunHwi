@@ -29,6 +29,7 @@
 		9AEAC51F280C2D1300A187C0 /* Reels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC51E280C2D1300A187C0 /* Reels.storyboard */; };
 		9AEAC521280C2D1C00A187C0 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC520280C2D1C00A187C0 /* Shop.storyboard */; };
 		9AEAC523280C2D2C00A187C0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AEAC522280C2D2C00A187C0 /* Profile.storyboard */; };
+		9AFCF62B2812867900E65E15 /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFCF62A2812867900E65E15 /* UIWindowExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9AEAC51E280C2D1300A187C0 /* Reels.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reels.storyboard; sourceTree = "<group>"; };
 		9AEAC520280C2D1C00A187C0 /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		9AEAC522280C2D2C00A187C0 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		9AFCF62A2812867900E65E15 /* UIWindowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		9A3B7D12280D1C2B00F6728E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9AFCF62A2812867900E65E15 /* UIWindowExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				9A84A12127FC2C7000BA3C74 /* ViewController.swift in Sources */,
 				9A2FBCAE280EBDB900470EF0 /* TabBarController.swift in Sources */,
 				9A4A105E27FD93BD008D3313 /* CompleteSignUpViewController.swift in Sources */,
+				9AFCF62B2812867900E65E15 /* UIWindowExtension.swift in Sources */,
 				9AEAC517280C2B2200A187C0 /* ShopViewController.swift in Sources */,
 				9A84A13427FC88E900BA3C74 /* RegisterPasswordViewController.swift in Sources */,
 				9AEAC513280C2A6000A187C0 /* SearchViewController.swift in Sources */,
