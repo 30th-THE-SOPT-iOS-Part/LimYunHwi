@@ -10,35 +10,39 @@ import UIKit
 extension UIWindow {
     func replaceRootViewController(_ viewController : UIViewController, animated: Bool, completion: (()-> Void)? ){
         let snapShotImageview = UIImageView(image: self.snapShot())
-        self.addSubview(snapShotImageview)
+        self.addSubview(snapShotImageview) //뷰 리스트 끝에 하위뷰 추가하기
         
+        //rootViewController를 변경하고 애니메이션 활성화 여부에 따라 작업 수행
+        ////swift에서 함수는 일급객체이므로 변수나 상수에 할당될 수 있다.
         let dismissCompletion = {() -> Void in
-            self.rootViewController = viewController
-            self.bringSubviewToFront(snapShotImageview)
+            self.rootViewController = viewController //rootViewController 변경
+            self.bringSubviewToFront(snapShotImageview) //서브뷰를 top에 위치시켜 화면에 보이게 하기 위해 주어진 서브 뷰를 이동시킨다.
             
-            if animated {
+            if animated { //animated 매개변수 인자가 true라면
                 UIView.animate(
-                    withDuration: 0.4,
-                    animations: { () -> Void in
+                    withDuration: 0.4, //0.4초 동안
+                    animations: { () -> Void in //이미지를 투명하게 만든다.
                         snapShotImageview.alpha = 0
                     },
-                    completion: { (success) -> Void in
-                        snapShotImageview.removeFromSuperview()
-                        guard let completion = completion else {return}
-                        completion()
+                    completion: { (success) -> Void in //애니메이션이 끝나면
+                        snapShotImageview.removeFromSuperview() //해당 뷰를 상위뷰와 화면에서 연결해제하고 제거한다.
+                        guard let completion = completion else {return} //completion 매개변수 인자가 nil이 아니라면
+                        completion() //해당 클로저 호출
 
                     })
-            } else {
-                snapShotImageview.removeFromSuperview()
-                guard let completion = completion else {return}
-                completion()
+            } else { //animated 매개변수 인자가 false라면
+                snapShotImageview.removeFromSuperview() //해당 뷰를 상위뷰와 화면에서 연결해제하고 제거한다.
+                guard let completion = completion else {return} //completion 매개변수 인자가 nil이 아니라면
+                completion() //해당 클로저 호출
             }
         }
         
-        if self.rootViewController!.presentedViewController != nil {
-            self.rootViewController?.dismiss(animated: true, completion: dismissCompletion)
+        if self.rootViewController!.presentedViewController != nil {  //rootViewController에 의해 present된 ViewController가 있는지 확인
+            self.rootViewController?.dismiss(animated: true, completion: dismissCompletion) //O, rootViewController와 자식 뷰컨트롤러를 dismiss한다. 후에 dismissCompletion 호출
+            //stack에서 낮은 위치의 뷰 컨트롤러에서 dismiss 메서드를 호출하면 자식 뷰 컨트롤러와 그 아래 자식(손자) 뷰 컨트롤러까지 dismiss된다.
+            //++ stack은 FILO(선입후출) 구조
         } else {
-            dismissCompletion()
+            dismissCompletion() // X, 바로 dismissCompletion 호출
         }
     }
     
