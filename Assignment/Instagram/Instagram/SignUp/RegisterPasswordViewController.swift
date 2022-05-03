@@ -38,14 +38,17 @@ class RegisterPasswordViewController: UIViewController {
         self.nextButton.alpha = self.nextButton.isUserInteractionEnabled ? 1 : 0.5
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CompleteSignUpViewController" {
-            guard let completeSignUpVC = segue.destination as? CompleteSignUpViewController else {return}
-            guard let password = self.passwordTextField.text else {return}
-            guard var user = user else {return}
-            user.password = password
-            
-            completeSignUpVC.user = user
-        }
+    @IBAction func tapNextButton(_ sender: UIButton) {
+        guard let completeSignUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "CompleteSignUpViewController") as? CompleteSignUpViewController else {return}
+        
+        guard let password = self.passwordTextField.text else {return}
+        guard var user = user else {return}
+        user.password = password
+        completeSignUpViewController.user = user
+        
+        completeSignUpViewController.modalPresentationStyle = .fullScreen
+        self.present(completeSignUpViewController, animated: true, completion: {
+            self.navigationController?.popToRootViewController(animated: true)
+        })
     }
 }

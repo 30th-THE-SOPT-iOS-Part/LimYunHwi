@@ -25,9 +25,16 @@ class CompleteSignUpViewController: UIViewController {
     }
     
     @IBAction func tapDoneButton(_ sender: UIButton) {
-        guard let presentingViewController = self.presentingViewController as? UINavigationController else {return}
-        presentingViewController.popToRootViewController(animated: false)
-        
+        let tabBarControllerStoryboard = UIStoryboard(name: "TabBarController", bundle: nil)
+        guard let tabBarController = tabBarControllerStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
+        tabBarController.modalPresentationStyle = .fullScreen
+
+        self.view.window?.replaceRootViewController(tabBarController, animated: true, completion: nil)
+        self.view.window?.makeKeyAndVisible()
+    }
+    
+    @IBAction func tapSignInOtherAccountButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
 }
