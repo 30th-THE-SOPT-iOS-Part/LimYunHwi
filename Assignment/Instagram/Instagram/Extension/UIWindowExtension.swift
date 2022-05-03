@@ -18,7 +18,7 @@ extension UIWindow {
             
             if animated {
                 UIView.animate(
-                    withDuration: 0.4,
+                    withDuration: 0.2,
                     animations: { () -> Void in
                         snapShotImageview.alpha = 0
                     },
@@ -26,7 +26,6 @@ extension UIWindow {
                         snapShotImageview.removeFromSuperview()
                         guard let completion = completion else {return}
                         completion()
-
                     })
             } else {
                 snapShotImageview.removeFromSuperview()
@@ -42,7 +41,7 @@ extension UIWindow {
         }
     }
     
-    func snapShot() -> UIImage {
+    private func snapShot() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
         drawHierarchy(in: bounds, afterScreenUpdates: true)
         

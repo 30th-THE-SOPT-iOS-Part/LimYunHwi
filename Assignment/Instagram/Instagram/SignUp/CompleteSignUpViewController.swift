@@ -11,14 +11,6 @@ class CompleteSignUpViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     
     var user: User?
-    let keyWindow = UIApplication
-            .shared
-            .connectedScenes
-            .filter({$0.activationState == .foregroundActive})
-            .map({$0 as? UIWindowScene})
-            .compactMap({$0})
-            .first?.windows
-            .filter({$0.isKeyWindow}).first
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +29,8 @@ class CompleteSignUpViewController: UIViewController {
         guard let tabBarController = tabBarControllerStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
         tabBarController.modalPresentationStyle = .fullScreen
 
-        self.present(tabBarController, animated: true) {
-            self.keyWindow?.replaceRootViewController(tabBarController, animated: true, completion: nil)
-        }
+        self.view.window?.replaceRootViewController(tabBarController, animated: true, completion: nil)
+        self.view.window?.makeKeyAndVisible()
     }
     
     @IBAction func tapSignInOtherAccountButton(_ sender: UIButton) {
