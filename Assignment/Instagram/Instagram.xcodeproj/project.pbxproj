@@ -85,6 +85,15 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		14AD5F5B2822A7A2006825A0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9AEAC51A280C2CB500A187C0 /* Home.storyboard */,
+				9AEAC510280C2A4900A187C0 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		9A3B7D12280D1C2B00F6728E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,14 +149,13 @@
 		9AEAC50D280C28D300A187C0 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				9AEAC510280C2A4900A187C0 /* HomeViewController.swift */,
+				14AD5F5B2822A7A2006825A0 /* Home */,
 				9AEAC512280C2A6000A187C0 /* SearchViewController.swift */,
 				9AEAC514280C2AE400A187C0 /* ReelsViewController.swift */,
 				9AEAC516280C2B2200A187C0 /* ShopViewController.swift */,
 				9AEAC518280C2C2C00A187C0 /* ProfileViewController.swift */,
 				9A2FBCAD280EBDB900470EF0 /* TabBarController.swift */,
 				9AEAC50E280C291900A187C0 /* TabBarController.storyboard */,
-				9AEAC51A280C2CB500A187C0 /* Home.storyboard */,
 				9AEAC51C280C2D0500A187C0 /* Search.storyboard */,
 				9AEAC51E280C2D1300A187C0 /* Reels.storyboard */,
 				9AEAC520280C2D1C00A187C0 /* Shop.storyboard */,
