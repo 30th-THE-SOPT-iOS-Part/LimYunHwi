@@ -9,7 +9,7 @@ import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var UserName: UILabel!
+    @IBOutlet weak var userName: UILabel!
     
     static let identifier = "StoryCollectionViewCell"
     static func nib() -> UINib {
@@ -18,5 +18,10 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func configureCell(userName: String, profileImage: String) {
+        self.profileImage.image = UIImage(named: profileImage)
+        self.userName.text = userName
     }
 }
