@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1428B0CB2824E8B700A2A2F1 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428B0C92824E8B700A2A2F1 /* FeedTableViewCell.swift */; };
+		1428B0CC2824E8B700A2A2F1 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1428B0CA2824E8B700A2A2F1 /* FeedTableViewCell.xib */; };
 		144B9EAD2823725F0017C080 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B9EAB2823725F0017C080 /* StoryCollectionViewCell.swift */; };
 		144B9EAE2823725F0017C080 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144B9EAC2823725F0017C080 /* StoryCollectionViewCell.xib */; };
 		144B9EB0282380690017C080 /* UIImageViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B9EAF282380690017C080 /* UIImageViewCustom.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1428B0C92824E8B700A2A2F1 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		1428B0CA2824E8B700A2A2F1 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		144B9EAB2823725F0017C080 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		144B9EAC2823725F0017C080 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		144B9EAF282380690017C080 /* UIImageViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewCustom.swift; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1428B0C82824E78D00A2A2F1 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				1428B0C92824E8B700A2A2F1 /* FeedTableViewCell.swift */,
+				1428B0CA2824E8B700A2A2F1 /* FeedTableViewCell.xib */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		144B9EB3282386530017C080 /* Story */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 		14AD5F5B2822A7A2006825A0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1428B0C82824E78D00A2A2F1 /* Feed */,
 				144B9EB3282386530017C080 /* Story */,
 				9AEAC51A280C2CB500A187C0 /* Home.storyboard */,
 				9AEAC510280C2A4900A187C0 /* HomeViewController.swift */,
@@ -254,6 +268,7 @@
 				144B9EAE2823725F0017C080 /* StoryCollectionViewCell.xib in Resources */,
 				144B9EB7282386E00017C080 /* StoryTableViewCell.xib in Resources */,
 				9AEAC523280C2D2C00A187C0 /* Profile.storyboard in Resources */,
+				1428B0CC2824E8B700A2A2F1 /* FeedTableViewCell.xib in Resources */,
 				9AEAC51D280C2D0500A187C0 /* Search.storyboard in Resources */,
 				9A84A12427FC2C7000BA3C74 /* Main.storyboard in Resources */,
 			);
@@ -275,6 +290,7 @@
 				9AEAC513280C2A6000A187C0 /* SearchViewController.swift in Sources */,
 				9AEAC511280C2A4900A187C0 /* HomeViewController.swift in Sources */,
 				9AEAC519280C2C2C00A187C0 /* ProfileViewController.swift in Sources */,
+				1428B0CB2824E8B700A2A2F1 /* FeedTableViewCell.swift in Sources */,
 				14AD5F562822963F006825A0 /* Post.swift in Sources */,
 				9A84A11D27FC2C7000BA3C74 /* AppDelegate.swift in Sources */,
 				14AD5F5A282298FA006825A0 /* Comment.swift in Sources */,
