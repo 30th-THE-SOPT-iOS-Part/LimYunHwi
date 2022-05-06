@@ -12,6 +12,9 @@ class StoryTableViewCell: UITableViewCell {
     
     var stories: [User] = []
     static let identifier = "StoryTableViewCell"
+    static func nib() -> UINib {
+        UINib(nibName: "StoryTableViewCell", bundle: nil)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
