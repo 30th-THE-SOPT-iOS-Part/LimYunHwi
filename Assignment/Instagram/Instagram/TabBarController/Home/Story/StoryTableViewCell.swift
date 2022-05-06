@@ -28,6 +28,7 @@ class StoryTableViewCell: UITableViewCell {
         collectionView.register(StoryCollectionViewCell.nib(), forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
         
         self.collectionView.dataSource = self
+        self.collectionView.delegate = self
     }
 }
 
@@ -56,7 +57,7 @@ extension StoryTableViewCell: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 4, left: 6, bottom: 8, right: 0)
+        return UIEdgeInsets(top: 12, left: 6, bottom: 8, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

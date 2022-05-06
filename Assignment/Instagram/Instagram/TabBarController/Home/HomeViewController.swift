@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
     
     private func configureTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         
         tableView.register(StoryTableViewCell.nib(), forCellReuseIdentifier: StoryTableViewCell.identifier)
         tableView.register(FeedTableViewCell.nib(), forCellReuseIdentifier: FeedTableViewCell.identifier)
@@ -57,5 +58,15 @@ extension HomeViewController: UITableViewDataSource {
         default :
             return UITableViewCell()
         }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let width = UIScreen.main.bounds.width
+        if indexPath.section == 0 {
+            return width * (72/375)
+        }
+        return width * (535.5/375)
     }
 }
