@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "avatar6.png",
+      "filename" : "MV5BN2I3M2FlMzMtYmJhMi00MzQyLTkyNWUtZjllZTJkNzYxY2U3XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "avatar6@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "avatar6@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "avatar3.png",
+      "filename" : "WallaceAndGromit_face.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "avatar3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "avatar3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

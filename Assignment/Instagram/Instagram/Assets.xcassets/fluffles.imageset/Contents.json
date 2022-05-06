@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "avatar5.png",
+      "filename" : "Piella-Bakewell.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "avatar5@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "avatar5@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

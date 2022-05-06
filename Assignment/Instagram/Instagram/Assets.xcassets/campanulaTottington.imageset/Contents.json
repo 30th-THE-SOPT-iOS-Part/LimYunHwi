@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "avatar4.png",
+      "filename" : "스크린샷 2022-05-06 오후 11.19.55.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "avatar4@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "avatar4@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

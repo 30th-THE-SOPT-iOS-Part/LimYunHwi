@@ -25,10 +25,10 @@ extension User {
         sampleUser6
     ]
     
-    static let sampleUser1 = User(userName: "_Wallace_", password: "", profileImage: "avatar1", post: Post.semplePost1, story: true)
-    static let sampleUser2 = User(userName: "gromit._.", password: "", profileImage: "avatar2", post: Post.semplePost2, story: true)
-    static let sampleUser3 = User(userName: "campanula_Tottington", password: "", profileImage: "avatar3", post: Post.semplePost3, story: true)
-    static let sampleUser4 = User(userName: "fluffle.s.", password: "", profileImage: "avatar4", post: Post.semplePost4, story: true)
-    static let sampleUser5 = User(userName: "w.ndol.n.", password: "", profileImage: "avatar5", post: Post.semplePost5, story: true)
-    static let sampleUser6 = User(userName: "a_Grand_Day", password: "", profileImage: "avatar6", post: Post.semplePost6, story: true)
+    static let sampleUser1 = User(userName: "_Wallace_", password: "", profileImage: "wallace", post: Post.semplePost1, story: true)
+    static let sampleUser2 = User(userName: "gromit._.", password: "", profileImage: "gromit", post: Post.semplePost2, story: true)
+    static let sampleUser3 = User(userName: "campanula_Tottington", password: "", profileImage: "campanulaTottington", post: Post.semplePost3, story: true)
+    static let sampleUser4 = User(userName: "fluffle.s.", password: "", profileImage: "fluffles", post: Post.semplePost4, story: true)
+    static let sampleUser5 = User(userName: "w.ndol.n.", password: "", profileImage: "wendolene", post: Post.semplePost5, story: true)
+    static let sampleUser6 = User(userName: "a_Grand_Day", password: "", profileImage: "aGrandDay", post: Post.semplePost6, story: true)
 }
