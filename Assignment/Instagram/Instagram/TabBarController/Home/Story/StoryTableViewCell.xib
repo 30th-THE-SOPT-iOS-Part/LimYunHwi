@@ -18,28 +18,38 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1wW-T6-uiE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oTR-Wu-zRl">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vdz-uh-Luh">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-Yu-apq">
+                        <rect key="frame" x="0.0" y="70" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Hg6-XM-9c8"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="iLN-Yu-apq" firstAttribute="top" secondItem="1wW-T6-uiE" secondAttribute="bottom" id="Fyh-Rl-bTc"/>
                     <constraint firstAttribute="trailing" secondItem="1wW-T6-uiE" secondAttribute="trailing" id="J65-Nw-4Gr"/>
-                    <constraint firstAttribute="bottom" secondItem="1wW-T6-uiE" secondAttribute="bottom" id="MPK-8U-IN0"/>
+                    <constraint firstItem="iLN-Yu-apq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wa7-SH-XTN"/>
                     <constraint firstItem="1wW-T6-uiE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aEF-3Q-qw4"/>
                     <constraint firstItem="1wW-T6-uiE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mjD-TJ-qQW"/>
+                    <constraint firstAttribute="bottom" secondItem="iLN-Yu-apq" secondAttribute="bottom" id="oZL-0p-I3U"/>
+                    <constraint firstAttribute="trailing" secondItem="iLN-Yu-apq" secondAttribute="trailing" id="qGy-lK-8nf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="1wW-T6-uiE" id="Yb1-lO-TkL"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="68.638392857142847"/>
+            <point key="canvasLocation" x="131.8840579710145" y="67.96875"/>
         </tableViewCell>
     </objects>
     <resources>
