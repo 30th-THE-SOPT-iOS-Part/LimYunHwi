@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
         feeds = User.sampleUser
         
         configureTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(tapLike), name: NotificationName.like, object: nil)
     }
     
     private func configureTableView() {
@@ -26,6 +27,23 @@ class HomeViewController: UIViewController {
         
         tableView.register(StoryTableViewCell.nib(), forCellReuseIdentifier: StoryTableViewCell.identifier)
         tableView.register(FeedTableViewCell.nib(), forCellReuseIdentifier: FeedTableViewCell.identifier)
+    }
+    
+    @objc private func tapLike(notification: NSNotification) {
+        guard let indexDict = notification.object as? [String : Int] else {return}
+        guard let index = indexDict["index"] else {return}
+        guard var post = feeds[index].post else {return}
+        let operand = post.like ? -1 : 1
+        
+        post.numberOfLike += operand
+        post.like.toggle()
+        feeds[index].post = post
+        
+        tableView.reloadData()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -49,12 +67,13 @@ extension HomeViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0 :
-            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: StoryTableViewCell.identifier) as? StoryTableViewCell else {return UITableViewCell()}
-            return cell
+            guard let storyCell = self.tableView.dequeueReusableCell(withIdentifier: StoryTableViewCell.identifier) as? StoryTableViewCell else {return UITableViewCell()}
+            return storyCell
         case 1:
-            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier) as? FeedTableViewCell else {return UITableViewCell()}
-            cell.configureCell(feeds[indexPath.row])
-            return cell
+            guard let feedCell = self.tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier) as? FeedTableViewCell else {return UITableViewCell()}
+            feedCell.configureCell(feeds[indexPath.row])
+            feedCell.index = indexPath.row
+            return feedCell
         default :
             return UITableViewCell()
         }

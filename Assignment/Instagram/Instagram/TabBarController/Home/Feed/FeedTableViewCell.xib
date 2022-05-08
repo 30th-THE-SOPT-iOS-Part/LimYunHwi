@@ -87,7 +87,14 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icn_unlike"/>
+                                <buttonConfiguration key="configuration" style="plain" image="icn_unlike">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tapLikeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ytg-Yj-Adj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8U-Wx-PuF">
                                 <rect key="frame" x="32" y="0.0" width="24" height="24"/>
@@ -161,6 +168,7 @@
                 <outlet property="contentImage" destination="90q-zK-oNl" id="a52-H0-Wel"/>
                 <outlet property="contentLabel" destination="ejB-gE-10u" id="RBC-Dx-blO"/>
                 <outlet property="contentUserNameLabel" destination="XNh-mf-TRs" id="eEx-93-OhY"/>
+                <outlet property="likeButton" destination="k5a-eo-5U8" id="vd4-JP-UnE"/>
                 <outlet property="likeLabel" destination="PBU-6C-p8t" id="Fzs-IC-3ne"/>
                 <outlet property="profileImage" destination="hip-Tb-rrP" id="LXR-HX-05a"/>
                 <outlet property="userNameLabel" destination="8As-rt-TvW" id="aCQ-xn-fcl"/>

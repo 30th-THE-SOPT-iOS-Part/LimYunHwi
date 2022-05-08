@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1424FE0B28278C6E0008E3EA /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424FE0A28278C6E0008E3EA /* NotificationName.swift */; };
 		1428B0CB2824E8B700A2A2F1 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428B0C92824E8B700A2A2F1 /* FeedTableViewCell.swift */; };
 		1428B0CC2824E8B700A2A2F1 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1428B0CA2824E8B700A2A2F1 /* FeedTableViewCell.xib */; };
 		144B9EAD2823725F0017C080 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B9EAB2823725F0017C080 /* StoryCollectionViewCell.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1424FE0A28278C6E0008E3EA /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		1428B0C92824E8B700A2A2F1 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		1428B0CA2824E8B700A2A2F1 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		144B9EAB2823725F0017C080 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				9AE50BF527FE8DD20086E9AE /* User.swift */,
 				14AD5F552822963F006825A0 /* Post.swift */,
 				14AD5F59282298FA006825A0 /* Comment.swift */,
+				1424FE0A28278C6E0008E3EA /* NotificationName.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				9AEAC511280C2A4900A187C0 /* HomeViewController.swift in Sources */,
 				9AEAC519280C2C2C00A187C0 /* ProfileViewController.swift in Sources */,
 				1428B0CB2824E8B700A2A2F1 /* FeedTableViewCell.swift in Sources */,
+				1424FE0B28278C6E0008E3EA /* NotificationName.swift in Sources */,
 				14AD5F562822963F006825A0 /* Post.swift in Sources */,
 				9A84A11D27FC2C7000BA3C74 /* AppDelegate.swift in Sources */,
 				14AD5F5A282298FA006825A0 /* Comment.swift in Sources */,
