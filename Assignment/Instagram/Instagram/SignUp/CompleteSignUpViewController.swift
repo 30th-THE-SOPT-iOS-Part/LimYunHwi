@@ -24,6 +24,16 @@ class CompleteSignUpViewController: UIViewController {
         }
     }
     
+    private func createAlert(_ title: String) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default){ _ in
+            self.dismiss(animated: true)
+        }
+        alert.addAction(action)
+        
+        self.present(alert, animated: true)
+    }
+    
     @IBAction func tapDoneButton(_ sender: UIButton) {
 //        let tabBarControllerStoryboard = UIStoryboard(name: "TabBarController", bundle: nil)
 //        guard let tabBarController = tabBarControllerStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
@@ -41,6 +51,7 @@ class CompleteSignUpViewController: UIViewController {
             case .success(let data):
                 guard let data = data as? SignUpResponse else {return}
                 print(data)
+                self.createAlert("회원가입 성공")
             case .requestErr(let err):
                 print(err)
             case .pathErr:
@@ -51,8 +62,6 @@ class CompleteSignUpViewController: UIViewController {
                 print("neworkErr")
             }
         }
-        
-        print("회원가입")
     }
     
     @IBAction func tapSignInOtherAccountButton(_ sender: UIButton) {
