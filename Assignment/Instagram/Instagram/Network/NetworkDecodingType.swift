@@ -9,4 +9,5 @@ import Foundation
 
 enum NetworkDecodingType {
     case signUp
+    case signIn
 }
