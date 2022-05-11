@@ -74,7 +74,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="SAH-tc-K9C" kind="presentation" identifier="CompleteSignUpViewController" modalPresentationStyle="fullScreen" id="zCb-cN-LW7"/>
+                                                    <action selector="tapSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XXd-vf-3KI"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5hR-45-NUj">

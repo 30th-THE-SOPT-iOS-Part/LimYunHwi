@@ -63,14 +63,36 @@ class ViewController: UIViewController {
         self.passwordTextField.rightViewMode = .always
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CompleteSignUpViewController" {
-            guard let completeSignUpVC = segue.destination as? CompleteSignUpViewController else {return}
-            guard let userId = self.userIdTextField.text else {return}
-            guard let password = self.passwordTextField.text else {return}
-            user = User(userName: userId, password: password)
-            
-            completeSignUpVC.user = user
+    //MARK: - Action
+    @IBAction func tapSignInButton(_ sender: UIButton) {
+        guard let email = self.userIdTextField.text else {return}
+        guard let password = self.passwordTextField.text else {return}
+        
+        UserService.shared.signIn(name: email, email: email, password: password) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? SignInResponse else {return}
+                print(data)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "CompleteSignUpViewController" {
+//            guard let completeSignUpVC = segue.destination as? CompleteSignUpViewController else {return}
+//            guard let userId = self.userIdTextField.text else {return}
+//            guard let password = self.passwordTextField.text else {return}
+//            user = User(userName: userId, password: password)
+//            
+//            completeSignUpVC.user = user
+//        }
+//    }
 }

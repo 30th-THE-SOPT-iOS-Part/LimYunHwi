@@ -11,7 +11,7 @@ struct SignInResponse: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: SignUpData?
+    let data: SignInData?
 }
 
 struct SignInData: Codable {
