@@ -8,12 +8,12 @@
 import Foundation
 
 struct SignUpResponse: Codable {
-    let status: String
+    let status: Int
     let success: Bool
     let message: String
     let data: SignUpData?
 }
 
 struct SignUpData: Codable {
-    let id: String
+    let id: Int
 }
