@@ -50,7 +50,7 @@ class UserService {
         }
     }
     
-    func signIn(name: String,
+    func signIn(name: String?,
                 email: String,
                 password: String,
                 completion: @escaping (NetworkResult<Any>) -> Void

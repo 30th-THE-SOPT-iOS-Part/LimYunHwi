@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         guard let email = self.userIdTextField.text else {return}
         guard let password = self.passwordTextField.text else {return}
         
-        UserService.shared.signIn(name: email, email: email, password: password) { response in
+        UserService.shared.signIn(name: nil, email: email, password: password) { response in
             switch response {
             case .success(let data):
                 guard let data = data as? SignInResponse else {return}
