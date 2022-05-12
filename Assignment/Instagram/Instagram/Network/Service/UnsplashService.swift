@@ -24,7 +24,7 @@ class UnsplashService {
         let dataRequest = AF.request(url,
                                      method: .get,
                                      parameters: params,
-                                     encoding: JSONEncoding.default,
+                                     encoding: URLEncoding.default,
                                      headers: headers)
         
         dataRequest.responseData{ [weak self] response in
@@ -43,9 +43,9 @@ class UnsplashService {
     //MARK: - decoding process
     private func checkStatus(_ status: Int, data: Data) -> NetworkResult<Any> {
         switch status {
-        case 200: return isValidData(data)
-        case 400...: return .pathErr
-        case 500..<600: return .serverErr
+        case 200..<300: return isValidData(data)
+        case 400..<500: return .pathErr
+        case ..<600: return .serverErr
         default: return .networkFail
         }
     }

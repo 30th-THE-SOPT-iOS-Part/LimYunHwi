@@ -42,6 +42,26 @@ class FeedTableViewCell: UITableViewCell {
         self.commentButton.setTitle("댓글 \(post.comments.count)개 모두 보기", for: .normal)
         self.contentImage.image = UIImage(named: post.image)
         self.likeButton.isSelected = post.like
+        
+        requestURLImage()
+    }
+    
+    private func requestURLImage() {
+        UnsplashService.shared.getRandomPhotos(count: 2) { result in
+            switch result {
+            case .success(let data):
+                guard let data = data as? [RandomPhotosResponse] else {return}
+                print(data.first?.links.download as Any)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkErr")
+            }
+        }
     }
     
     @IBAction func tapLikeButton(_ sender: UIButton) {
