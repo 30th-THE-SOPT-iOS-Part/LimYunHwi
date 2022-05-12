@@ -34,23 +34,15 @@ class CompleteSignUpViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    //MARK: - Action
     @IBAction func tapDoneButton(_ sender: UIButton) {
-//        let tabBarControllerStoryboard = UIStoryboard(name: "TabBarController", bundle: nil)
-//        guard let tabBarController = tabBarControllerStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
-//        tabBarController.modalPresentationStyle = .fullScreen
-//
-//        self.view.window?.replaceRootViewController(tabBarController, animated: true, completion: nil)
-//        self.view.window?.makeKeyAndVisible()
-        
         guard let user = user else {return}
         
         UserService.shared.signUp(name: user.userName,
                                   email: user.userName,
                                   password: user.password){ response in
             switch response {
-            case .success(let data):
-                guard let data = data as? SignUpResponse else {return}
-                print(data)
+            case .success(_):
                 self.createAlert("회원가입 성공")
             case .requestErr(let err):
                 print(err)

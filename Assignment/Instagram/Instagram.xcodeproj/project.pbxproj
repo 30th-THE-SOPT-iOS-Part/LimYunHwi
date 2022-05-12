@@ -10,6 +10,7 @@
 		1424FE0B28278C6E0008E3EA /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1424FE0A28278C6E0008E3EA /* NotificationName.swift */; };
 		1428B0CB2824E8B700A2A2F1 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428B0C92824E8B700A2A2F1 /* FeedTableViewCell.swift */; };
 		1428B0CC2824E8B700A2A2F1 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1428B0CA2824E8B700A2A2F1 /* FeedTableViewCell.xib */; };
+		142DF2A5282CC71C00591409 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DF2A4282CC71C00591409 /* UserInfo.swift */; };
 		1431124E282B900800FA9BC1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431124D282B900800FA9BC1 /* APIConstants.swift */; };
 		14311250282B93B200FA9BC1 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1431124F282B93B200FA9BC1 /* NetworkResult.swift */; };
 		14311253282B94C400FA9BC1 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14311252282B94C400FA9BC1 /* SignUpResponse.swift */; };
@@ -55,6 +56,7 @@
 		1424FE0A28278C6E0008E3EA /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		1428B0C92824E8B700A2A2F1 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		1428B0CA2824E8B700A2A2F1 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		142DF2A4282CC71C00591409 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		1431124D282B900800FA9BC1 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		1431124F282B93B200FA9BC1 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		14311252282B94C400FA9BC1 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
@@ -121,6 +123,34 @@
 			path = Feed;
 			sourceTree = "<group>";
 		};
+		142DF29E282CC2C300591409 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AE50BF527FE8DD20086E9AE /* User.swift */,
+				14AD5F552822963F006825A0 /* Post.swift */,
+				14AD5F59282298FA006825A0 /* Comment.swift */,
+				1424FE0A28278C6E0008E3EA /* NotificationName.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		142DF2A3282CC70700591409 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				142DF2A4282CC71C00591409 /* UserInfo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		142DF2A6282CDFDF00591409 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				9A84A12027FC2C7000BA3C74 /* ViewController.swift */,
+				9A84A12227FC2C7000BA3C74 /* Main.storyboard */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		1431124C282B8FEA00FA9BC1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,12 +202,10 @@
 		14AD5F542822949D006825A0 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				142DF2A3282CC70700591409 /* Data */,
+				142DF29E282CC2C300591409 /* Model */,
 				14311254282B958700FA9BC1 /* Request */,
 				14311251282B94A400FA9BC1 /* Response */,
-				9AE50BF527FE8DD20086E9AE /* User.swift */,
-				14AD5F552822963F006825A0 /* Post.swift */,
-				14AD5F59282298FA006825A0 /* Comment.swift */,
-				1424FE0A28278C6E0008E3EA /* NotificationName.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -236,11 +264,10 @@
 				14AD5F542822949D006825A0 /* DataModel */,
 				9A3B7D12280D1C2B00F6728E /* Extension */,
 				9AEAC50D280C28D300A187C0 /* TabBarController */,
+				142DF2A6282CDFDF00591409 /* SignIn */,
 				9A84A13027FC872600BA3C74 /* SignUp */,
 				9A84A11C27FC2C7000BA3C74 /* AppDelegate.swift */,
 				9A84A11E27FC2C7000BA3C74 /* SceneDelegate.swift */,
-				9A84A12027FC2C7000BA3C74 /* ViewController.swift */,
-				9A84A12227FC2C7000BA3C74 /* Main.storyboard */,
 				9A84A12527FC2C7100BA3C74 /* Assets.xcassets */,
 				9A84A12727FC2C7100BA3C74 /* LaunchScreen.storyboard */,
 				9A84A12A27FC2C7100BA3C74 /* Info.plist */,
@@ -436,6 +463,7 @@
 				9A84A13227FC886E00BA3C74 /* RegisterUserNameViewController.swift in Sources */,
 				9AE50BF627FE8DD20086E9AE /* User.swift in Sources */,
 				144B9EAD2823725F0017C080 /* StoryCollectionViewCell.swift in Sources */,
+				142DF2A5282CC71C00591409 /* UserInfo.swift in Sources */,
 				1431125D282BF59600FA9BC1 /* SignInRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
