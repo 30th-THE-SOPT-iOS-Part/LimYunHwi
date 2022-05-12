@@ -18,3 +18,11 @@ struct APIConstants {
     //signInURL = "http://13.124.62.236/auth/signin"
     static let signInURL = baseURL + "/auth/signin"
 }
+
+//MARK: - Unsplash API
+extension APIConstants {
+    static let unsplashBaseURL = "https://api.unsplash.com"
+    
+    static let randomPhotosURL = unsplashBaseURL + "/photos/random"
+    
+}
