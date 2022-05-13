@@ -47,7 +47,7 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     private func requestURLImage() {
-        UnsplashService.shared.getRandomPhotos(count: 2) { result in
+        UnsplashService.shared.getRandomPhotos(count: 1) { result in
             switch result {
             case .success(let data):
                 guard let data = data as? [RandomPhotosResponse] else {return}

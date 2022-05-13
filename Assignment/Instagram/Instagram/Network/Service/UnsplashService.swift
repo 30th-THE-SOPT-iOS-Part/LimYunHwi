@@ -53,7 +53,7 @@ class UnsplashService {
     private func isValidData(_ data: Data)-> NetworkResult<Any>{
         let decoder = JSONDecoder()
         
-        guard let data = try? decoder.decode(RandomPhotosResponse.self, from: data) else {return .pathErr}
+        guard let data = try? decoder.decode([RandomPhotosResponse].self, from: data) else {return .pathErr}
         return .success(data as Any)
     }
 }
