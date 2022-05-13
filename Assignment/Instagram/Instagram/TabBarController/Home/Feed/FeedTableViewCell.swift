@@ -40,18 +40,18 @@ class FeedTableViewCell: UITableViewCell {
         self.likeLabel.text = "좋아요 \(post.numberOfLike)개"
         self.contentLabel.text = post.content
         self.commentButton.setTitle("댓글 \(post.comments.count)개 모두 보기", for: .normal)
-        self.contentImage.image = UIImage(named: post.image)
         self.likeButton.isSelected = post.like
         
         requestURLImage()
     }
     
     private func requestURLImage() {
-        UnsplashService.shared.getRandomPhotos(count: 1) { result in
+        UnsplashService.shared.getRandomPhotos(count: 1) { [weak self] result in
             switch result {
             case .success(let data):
                 guard let data = data as? [RandomPhotosResponse] else {return}
-                print(data.first?.links.download as Any)
+                guard let downloadURL = data.first?.links.download else {return}
+                self?.confidureImagefromURL(downloadURL)
             case .requestErr(let err):
                 print(err)
             case .pathErr:
@@ -60,6 +60,18 @@ class FeedTableViewCell: UITableViewCell {
                 print("serverErr")
             case .networkFail:
                 print("networkErr")
+            }
+        }
+    }
+    
+    private func confidureImagefromURL(_ url: String) {
+        guard let url = URL(string: url) else {return}
+        
+        DispatchQueue.global().async { [weak self] in
+            guard let data = try? Data(contentsOf: url) else {return}
+            
+            DispatchQueue.main.async {
+                self?.contentImage.image = UIImage(data: data)
             }
         }
     }
