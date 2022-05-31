@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userIdTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var user: User?
+    //MARK: - Properties
     var passwordShownButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
@@ -63,14 +63,43 @@ class ViewController: UIViewController {
         self.passwordTextField.rightViewMode = .always
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CompleteSignUpViewController" {
-            guard let completeSignUpVC = segue.destination as? CompleteSignUpViewController else {return}
-            guard let userId = self.userIdTextField.text else {return}
-            guard let password = self.passwordTextField.text else {return}
-            user = User(userName: userId, password: password)
-            
-            completeSignUpVC.user = user
+    private func createAlert(_ title: String){
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default) { _ in
+            let tabBarControllerStoryboard = UIStoryboard(name: "TabBarController", bundle: nil)
+            guard let tabBarController = tabBarControllerStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
+            tabBarController.modalPresentationStyle = .fullScreen
+
+            self.view.window?.replaceRootViewController(tabBarController, animated: true, completion: nil)
+            self.view.window?.makeKeyAndVisible()
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true)
+    }
+    
+    //MARK: - Action
+    @IBAction func tapSignInButton(_ sender: UIButton) {
+        guard let email = self.userIdTextField.text else {return}
+        guard let password = self.passwordTextField.text else {return}
+        
+        UserService.shared.signIn(name: nil, email: email, password: password) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? SignInResponse else {return}
+                UserInfo.shared.name = data.data?.name
+                UserInfo.shared.email = data.data?.email
+                self.createAlert("로그인 성공")
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
     }
 }
