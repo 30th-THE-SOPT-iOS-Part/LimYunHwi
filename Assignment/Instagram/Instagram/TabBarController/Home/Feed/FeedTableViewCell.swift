@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageViewCustom!
@@ -52,14 +53,8 @@ class FeedTableViewCell: UITableViewCell {
                 guard let data = data as? [RandomPhotosResponse] else {return}
                 guard let downloadURL = data.first?.links.download else {return}
                 self?.confidureImagefromURL(downloadURL)
-            case .requestErr(let err):
-                print(err)
-            case .pathErr:
-                print("pathErr")
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkErr")
+            default :
+                debugPrint(result)
             }
         }
     }
@@ -67,12 +62,19 @@ class FeedTableViewCell: UITableViewCell {
     private func confidureImagefromURL(_ url: String) {
         guard let url = URL(string: url) else {return}
         
-        DispatchQueue.global().async { [weak self] in
-            guard let data = try? Data(contentsOf: url) else {return}
-            
-            DispatchQueue.main.async {
-                self?.contentImage.image = UIImage(data: data)
+        let request = AF.request(url, method: .get)
+        
+        request.responseData{ [weak self] response in
+            switch response.result {
+            case .success(let imageData):
+                DispatchQueue.main.async {
+                    guard let image = UIImage(data: imageData) else {return}
+                    self?.contentImage.image = image
+                }
+            case .failure(let error):
+                print(error)
             }
+            
         }
     }
     
