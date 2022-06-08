@@ -30,9 +30,9 @@ class UnsplashService {
         dataRequest.responseData{ [weak self] response in
             switch response.result {
             case .success :
-                guard let statusCode = response.response?.statusCode else {return}
-                guard let value = response.value else {return}
-                guard let networkResult = self?.checkStatus(statusCode, data: value) else {return}
+                guard let statusCode = response.response?.statusCode,
+                      let value = response.value,
+                      let networkResult = self?.checkStatus(statusCode, data: value) else {return}
                 completion(networkResult)
             case .failure:
                 completion(.networkFail)
