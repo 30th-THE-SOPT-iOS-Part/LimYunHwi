@@ -23,3 +23,8 @@
   - NotificationCenter로 전달
   - Closure로 전달
   - 장단점 정리
+<br>
+
+|Property|DelegatePattern|NoticationCenter|Closure|
+| :-----------: | :-----------: | :-----------: | :-----------: |
+| ![Simulator Screen Recording - iPhone 11 - 2022-06-20 at 14 30 35](https://user-images.githubusercontent.com/65601189/174598327-2d75d313-b329-44c4-b2e7-4b06657ad630.gif)| ![Simulator Screen Recording - iPhone 11 - 2022-06-20 at 19 40 48](https://user-images.githubusercontent.com/65601189/174598366-51a5161e-c507-47c8-8260-c3b4e135a171.gif)|||
