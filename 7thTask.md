@@ -19,7 +19,7 @@
 # 🌿 도전과제
 #### 데이터 전달 정리
   - [Property로 전달](https://88yhtserof.tistory.com/56)
-  - DelegatePattern으로 전달
+  - [DelegatePattern으로 전달](https://88yhtserof.tistory.com/57)
   - NotificationCenter로 전달
   - Closure로 전달
   - 장단점 정리
